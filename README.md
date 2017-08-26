@@ -1,2 +1,1 @@
-# Blog
-Edward's technology blog.
+Please enter http://www.isedwardtang.com to enjoy my blog.
