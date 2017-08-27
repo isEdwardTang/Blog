@@ -19,7 +19,7 @@ author: Edward
 
 ## 一、初识Python
 
-#### 1、第一个Python代码
+### 1、第一个Python代码
 
 ```python
 print("Hello World")
@@ -27,7 +27,7 @@ print("Hello World")
 
 依然是熟悉的Hello World， 对于只学过c和c++的我来说，着实有点奇怪，怎么main()没了(其实是有的)，头文件也没了，甚至连一句语句的末尾标识逗号也不见踪影。
 
-#### 2、概览
+### 2、概览
 
 用下面一段猜大小的代码码来解释一下python与c（c++）的区别
 
@@ -112,12 +112,12 @@ while True:
 - 都有基本的运算符，但是python增加了**，//，<>，去掉了逻辑运算符中的符号表达，全部由and，or，not等- 关键词表示
 - ...
 
-### 二、基本数据类型
+## 二、基本数据类型
 
 与c不同，Python的面向对象特征更加明显，连int，float等也有自己的方法；
 与c++相比，Python的list，tuple，dict 等相较与STL的容器更容易使用，内置的方法也较丰富
 
-#### 1、int， float， complex
+### 1、int， float， complex
 
 ```python
 # int 方法
@@ -155,7 +155,7 @@ def conjugate(self):
 ```
 对于complex a， 可以通过a.real和a.imag使用其实部和虚部
 
-#### 2、bool: 
+### 2、bool: 
 True, False
 例如， 可以
 ```python
@@ -166,7 +166,7 @@ while a:
         a = False
 ```
 
-#### 3、str: 
+### 3、str: 
 通过'', "" 或 str()构建
 ```python
 def capitalize(self):
@@ -323,7 +323,7 @@ def translate(self, table):
 # 根据maketrans()生成的table来翻译str，返回拷贝，str不变
 ```
 
-##### a.对str中的方法的总结：
+a.对str中的方法的总结：
 
 - 大小写，空格与table，特定格式等的转化，替换： capitalize，casefold，expandtabs，format，lower，upper，swapcase，replace，title，maketrans，translate
 - 填充与移除字符串，连接与分隔字符串： center，strip，lstrip，rstrip，join，ljust，rjust，partition，rpartition，split，rsplit，splitlines，zfill
@@ -332,7 +332,7 @@ def translate(self, table):
 - 和左右扫描方向有关的方法一般还包括一个r__()方法，表示从右向左扫描
 - 所有方法均不改变str，只是返回一个拷贝或bool
 
-##### b.几个方法详解：
+b.几个方法详解：
 
 - format:
 
@@ -400,7 +400,7 @@ lst = s.split('-')
 # lst = ['a', 'b', 'c', 'd']
 ```
 
-##### c.索引和切片：
+c.索引和切片：
 Python中的索引和C类似，但是可以从右边开始：
 ```python
 word = "python"
@@ -420,7 +420,7 @@ word = "python"
 切片和c++中的迭代器类似，都是为单闭合区间；
 切记str是const的， 不可以通过赋值等改变它们
 
-#### 4、list：
+### 4、list：
 通过[]或list()构建
 
 ```python
@@ -469,7 +469,7 @@ def sort(self, key=None, reverse=False):
 # 排序list，key可以为lambda或cmp，reverse为True需要反转
 ```
 
-##### a.对list中方法的总结：
+a.对list中方法的总结：
 
 - 添加：append, extend, insert
 - 删除：clear, pop, remove
@@ -479,7 +479,7 @@ def sort(self, key=None, reverse=False):
 - 反转：reverse
 - 与str不同，list中元素大都直接修改list，返回None而不是拷贝
 
-#### b.几个方法详解：
+b.几个方法详解：
 
 - append和extend：
 ```python
@@ -492,7 +492,7 @@ lst.extend([1, 2, 3])
 #[1, 5, 4, 3, 8, 3, [1, 2, 3], 1, 2, 3]，合并为一个list
 ```
 
-##### c.索引和切片：
+c.索引和切片：
 与str基本一致，但是由于list可变，还存在一个del语言：
 ```python
 lst = [3, 4, 5, 6, 7]
@@ -504,7 +504,7 @@ del lst[:]
 # lst = []
 ```
 
-#### 5.tuple:
+### 5、uple:
 通过()或tuple()构建(括号可以省略), 只包含一个元素时，在元素后面添加逗号
 
 ```python
@@ -520,7 +520,7 @@ tuple和list的区别在于其不能改变，所有很多方法没有
 tuple也有索引和切片，不再赘述
 要想对tuple进行强制修改，可以通过list()构造
 
-#### 6.dict
+### 6、dict
 :通过{}或dict()构建
 
 ```python
@@ -569,7 +569,7 @@ def update(self, E=None, **F):
 # 用另一个dict F 来更新原dict， 返回None
 ```
 
-##### a.对dict中方法的总结：
+a.对dict中方法的总结：
 
 - 添加：直接用dic[key] = value即可添加
 - 删除：clear, pop, popitem
@@ -577,7 +577,7 @@ def update(self, E=None, **F):
 - 构建：copy, fromkeys, update
 - 与list类似，但由于是无序的，所有没有下标的操作，且popitem弹出的元素也是随机的
 
-##### b.几个方法详解：
+b.几个方法详解：
 
 - pop和popitem:
 
@@ -631,7 +631,7 @@ dic = dic1.update(dic2)
 # dic2 = {'k1': 13, 'k2': 14, 'k3': 250, 'k4': 'Edward'}
 ```
 
-#### 7.set:
+### 7、set:
 通过set()构建
 
 ```python
@@ -704,7 +704,7 @@ def remove(self, *args, **kwargs):
 # 清除set中的参数元素，返回None，没有会出错
 ```
 
-##### a.对set中方法的总结:
+a.对set中方法的总结:
 
 - 差集，交集，并集运算：difference, difference_update, symmetric_difference, symmetric_difference_update, intersection, intersection_update, union, update
 - 添加元素：add
@@ -714,18 +714,26 @@ def remove(self, *args, **kwargs):
 - 集合间的运算都有两个版本，分别直接在原set上操作和返回一个拷贝
 - 与dict相比，没有key，也是无序的，所有没有下标操作，pop也是随机弹出元素
 
-##### b.集合的运算符：
+b.集合的运算符：
 
-```python
 a, b, c均为集合
-差集：c = a - b 等同于 c = a.difference(b)
-     a -= b 等同于 a.difference_update(b)
-对称差集：c = a ^ b 等同于 c = a.symmetric_difference(b)
-        a ^= b 等同于 a.symmetric_difference_update(b)
-交集：c = a & b 等同于 c = a.intersection(b)
-     a &= b 等同于 a.intersection_update(b)
-并集：c = a | b 等同于 c = a.union(b)
-     a |= b 等同于 a.update(b)
-判断子集： a <= b 等同于 a.issubset(b)
-判断父集： a >= b 等同于 a.issupperset(b)
-```
+- 差集：c = a - b 等同于 c = a.difference(b)
+
+    a -= b 等同于 a.difference_update(b)
+
+- 对称差集：c = a ^ b 等同于 c = a.symmetric_difference(b)
+
+    a ^= b 等同于 a.symmetric_difference_update(b)
+
+- 交集：c = a & b 等同于 c = a.intersection(b)
+
+    a &= b 等同于 a.intersection_update(b)
+
+- 并集：c = a | b 等同于 c = a.union(b)
+
+    a |= b 等同于 a.update(b)
+
+- 判断子集： a <= b 等同于 a.issubset(b)
+
+- 判断父集： a >= b 等同于 a.issupperset(b)
+
