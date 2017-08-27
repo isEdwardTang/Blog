@@ -13,9 +13,9 @@ author: Edward
 
 学习Python，一是因为暑假学的c++头疼，听说Python简单，那我就试试吧，二是因为Python形势一片大好，算是附和潮流吧！
 
-## 一、初识Python
+### 一、初识Python
 
-### 1、第一个Python代码
+#### 1、第一个Python代码
 
 ```python
 print("Hello World")
@@ -23,9 +23,10 @@ print("Hello World")
 
 依然是熟悉的Hello World， 对于只学过c和c++的我来说，着实有点奇怪，怎么main()没了(其实是有的)，头文件也没了，甚至连一句语句的末尾标识逗号也不见踪影。
 
-### 2、概览
+#### 2、概览
 
 用下面一段猜大小的代码码来解释一下python与c（c++）的区别
+
 C:
 ```c
 #include<stdio.h>
@@ -68,7 +69,8 @@ int main(void)
     return 0;
 }
 ```
-Python
+
+Python:
 ```python
 import random
 
@@ -106,12 +108,12 @@ while True:
 - 都有基本的运算符，但是python增加了**，//，<>，去掉了逻辑运算符中的符号表达，全部由and，or，not等- 关键词表示
 - ...
 
-## 二、基本数据类型
+### 二、基本数据类型
 
 与c不同，Python的面向对象特征更加明显，连int，float等也有自己的方法；
 与c++相比，Python的list，tuple，dict 等相较与STL的容器更容易使用，内置的方法也较丰富
 
-### 1、int， float， complex
+#### 1、int， float， complex
 
 ```python
 # int 方法
@@ -146,12 +148,11 @@ def is_integer(self, *args, **kwargs):
 def conjugate(self):
     pass
 # 返回复数的共轭复数
-
-int， float，complex方法
 ```
 对于complex a， 可以通过a.real和a.imag使用其实部和虚部
 
-### 2、bool: True, False
+#### 2、bool: 
+True, False
 例如， 可以
 ```python
 a = True
@@ -161,7 +162,8 @@ while a:
         a = False
 ```
 
-### 3、str: 通过'', "" 或 str()构建
+#### 3、str: 
+通过'', "" 或 str()构建
 ```python
 def capitalize(self):
     pass
@@ -315,11 +317,9 @@ def maketrans(self, *args, **kwargs):
 def translate(self, table): 
     pass
 # 根据maketrans()生成的table来翻译str，返回拷贝，str不变
-
-str方法
 ```
 
-#### a.对str中的方法的总结：
+##### a.对str中的方法的总结：
 
 - 大小写，空格与table，特定格式等的转化，替换： capitalize，casefold，expandtabs，format，lower，upper，swapcase，replace，title，maketrans，translate
 - 填充与移除字符串，连接与分隔字符串： center，strip，lstrip，rstrip，join，ljust，rjust，partition，rpartition，split，rsplit，splitlines，zfill
@@ -328,9 +328,10 @@ str方法
 - 和左右扫描方向有关的方法一般还包括一个r__()方法，表示从右向左扫描
 - 所有方法均不改变str，只是返回一个拷贝或bool
 
-#### b.几个方法详解：
+##### b.几个方法详解：
 
 - format:
+
 ```python
 # 通过位置
 string1 = "{0} is the most {1} teacher of life"
@@ -367,6 +368,7 @@ str = string.format(1234567)
 ```
 
 - maketrans和translate：
+
 ```python
 # s.maketrans('s1', 's2') s1 和 s2 的长度必须一致，生成一个转换表
 # s.translate(table) 对字符串s按照table里的字符映射关系替换
@@ -377,6 +379,7 @@ str = s.translate(table)
 ```
 
 - join和split：
+
 ```python
 # join用于用指定str连接参数的str序列
 lst = ['a', 'b', 'c', 'd']
@@ -393,7 +396,7 @@ lst = s.split('-')
 # lst = ['a', 'b', 'c', 'd']
 ```
 
-#### c.索引和切片：
+##### c.索引和切片：
 Python中的索引和C类似，但是可以从右边开始：
 ```python
 word = "python"
@@ -413,7 +416,8 @@ word = "python"
 切片和c++中的迭代器类似，都是为单闭合区间；
 切记str是const的， 不可以通过赋值等改变它们
 
-### 4、list：通过[]或list()构建
+#### 4、list：
+通过[]或list()构建
 
 ```python
 def append(self, p_object):
@@ -459,11 +463,9 @@ def reverse(self):
 def sort(self, key=None, reverse=False):
     pass
 # 排序list，key可以为lambda或cmp，reverse为True需要反转
-
-list方法
 ```
 
-#### a.对list中方法的总结：
+##### a.对list中方法的总结：
 
 - 添加：append, extend, insert
 - 删除：clear, pop, remove
@@ -486,7 +488,7 @@ lst.extend([1, 2, 3])
 #[1, 5, 4, 3, 8, 3, [1, 2, 3], 1, 2, 3]，合并为一个list
 ```
 
-#### c.索引和切片：
+##### c.索引和切片：
 与str基本一致，但是由于list可变，还存在一个del语言：
 ```python
 lst = [3, 4, 5, 6, 7]
@@ -498,7 +500,8 @@ del lst[:]
 # lst = []
 ```
 
-### 5.tuple:通过()或tuple()构建(括号可以省略), 只包含一个元素时，在元素后面添加逗号
+#### 5.tuple:
+通过()或tuple()构建(括号可以省略), 只包含一个元素时，在元素后面添加逗号
 
 ```python
 def count(self, value):
@@ -508,14 +511,13 @@ def count(self, value):
 def index(self, value, start=None, stop=None):
     pass
 # 返回子序列[start, stop)中第一个值为value的下标
-
-tuple方法
 ```
 tuple和list的区别在于其不能改变，所有很多方法没有
 tuple也有索引和切片，不再赘述
 要想对tuple进行强制修改，可以通过list()构造
 
-### 6.dict:通过{}或dict()构建
+#### 6.dict
+:通过{}或dict()构建
 
 ```python
 def clear(self): 
@@ -561,11 +563,9 @@ def popitem(self):
 def update(self, E=None, **F):
     pass
 # 用另一个dict F 来更新原dict， 返回None
-
-dict方法
 ```
 
-#### a.对dict中方法的总结：
+##### a.对dict中方法的总结：
 
 - 添加：直接用dic[key] = value即可添加
 - 删除：clear, pop, popitem
@@ -573,9 +573,10 @@ dict方法
 - 构建：copy, fromkeys, update
 - 与list类似，但由于是无序的，所有没有下标的操作，且popitem弹出的元素也是随机的
 
-#### b.几个方法详解：
+##### b.几个方法详解：
 
 - pop和popitem:
+
 ```python
 dic = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
 # key为str的构建时也可以写成 dic = dict(k1 = 'v1', k2 = 'v2', k3 = 'v3)
@@ -586,6 +587,7 @@ item = dic.popitems()
 ```
 
 - get和setdefault: 
+
 ```python
 dic = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
 s1 = get('k1')  # s1 = dic['k1']
@@ -595,6 +597,7 @@ s2 = setdefault('k4', 'v4')  # dic['k4'] = 'v4'
 ```
 
 - items, keys, values:
+
 ```python
 dic = {'k1': 'v1', 'k2': 'v2', 'k3': 'v3'}
 for k in dic.keys():
@@ -607,6 +610,7 @@ for k, v in dic.items():
 ```
 
 -  fromkeys和update：
+
 ```python
 # fromkeys第一个参数可以是任意类型的序列，
 # 第二个参数为空默认value都为None
@@ -623,7 +627,9 @@ dic = dic1.update(dic2)
 # dic2 = {'k1': 13, 'k2': 14, 'k3': 250, 'k4': 'Edward'}
 ```
 
-### 7.set:通过set()构建
+#### 7.set:
+通过set()构建
+
 ```python
 def add(self, *args, **kwargs):
     pass
@@ -692,11 +698,9 @@ def pop(self, *args, **kwargs):
 def remove(self, *args, **kwargs):
     pass
 # 清除set中的参数元素，返回None，没有会出错
-
-set方法
 ```
 
-#### a.对set中方法的总结:
+##### a.对set中方法的总结:
 
 - 差集，交集，并集运算：difference, difference_update, symmetric_difference, symmetric_difference_update, intersection, intersection_update, union, update
 - 添加元素：add
@@ -706,7 +710,7 @@ set方法
 - 集合间的运算都有两个版本，分别直接在原set上操作和返回一个拷贝
 - 与dict相比，没有key，也是无序的，所有没有下标操作，pop也是随机弹出元素
 
-#### b.集合的运算符：
+##### b.集合的运算符：
 
 ```python
 a, b, c均为集合
