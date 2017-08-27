@@ -17,7 +17,7 @@ author: Edward
 
 
 
-### 一、初识Python
+## 一、初识Python
 
 #### 1、第一个Python代码
 
