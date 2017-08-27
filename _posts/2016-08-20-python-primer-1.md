@@ -13,6 +13,10 @@ author: Edward
 
 学习Python，一是因为暑假学的c++头疼，听说Python简单，那我就试试吧，二是因为Python形势一片大好，算是附和潮流吧！
 
+
+
+
+
 ### 一、初识Python
 
 #### 1、第一个Python代码
