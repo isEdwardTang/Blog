@@ -27,7 +27,7 @@ type: page
 
 ## 联系我
 
-* GitHub：[Gaohaoyang](https://github.com/isedwardtang)
+* GitHub：[EdwardTang](https://github.com/isedwardtang)
 * email：isedwardtang@gmail.com
 * [知乎](https://www.zhihu.com/people/bao-feng-shao-nian-8)
 * [Facebook](https://www.facebook.com/isedwardtang)
@@ -35,7 +35,7 @@ type: page
 
 ## 关于本站
 
-# 感谢大神提供这个主题，后期会再这个基础上进行挖掘和改进
+### 感谢大神提供这个主题，后期会再这个基础上进行挖掘和改进
 
 **若您想使用这个 jekyll 博客主题，请访问：[https://github.com/Gaohaoyang/gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
 
