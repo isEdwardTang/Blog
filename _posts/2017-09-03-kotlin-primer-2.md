@@ -19,7 +19,7 @@ author: Edward
 
 在kotlin中，一切都是对象，所有基本数据类型也有其属性和方法。
 
-### 1、Numbers: 
+### 1、Numbers
 
 包括Double、Float、Long、Int、Short、Byte，
 
@@ -67,11 +67,11 @@ xor(bits) – bitwise xor
 inv() – bitwise inversion 
 ```
 
-### 2、Char和Boolean：
+### 2、Char和Boolean
 
 kotlin中的Char不能被当做数字对待，Char和Boolean具有和Number相同的方法
 
-### 3、Array:
+### 3、Array
 
 创建数组的方式：
 
@@ -88,7 +88,7 @@ public operator fun set(index: Int, value: T): Unit // 相当于arr[index] = val
 
 除了Array外，还可以创建指定了类型的数组：ByteArray、CharArray、ShortArray、IntArray、LongArray、FloatArray、BooleanArray，分别有对应的*arrayOf构建方法。
 
-### 4、String:
+### 4、String
 
 String在kotlin中也是不可变的，它具有以下从Java中继承来的方法：
 

@@ -155,9 +155,11 @@ def conjugate(self):
 ```
 对于complex a， 可以通过a.real和a.imag使用其实部和虚部
 
-### 2、bool: 
+### 2、bool
+
 True, False
 例如， 可以
+
 ```python
 a = True
 while a:
@@ -166,8 +168,10 @@ while a:
         a = False
 ```
 
-### 3、str: 
+### 3、str
+
 通过'', "" 或 str()构建
+
 ```python
 def capitalize(self):
     pass
@@ -402,13 +406,16 @@ lst = s.split('-')
 
 c.索引和切片：
 Python中的索引和C类似，但是可以从右边开始：
+
 ```python
 word = "python"
 # word[0] = 'p'
 # word[5] = 'n'
 # word[-1] = 'n', 表示最后一个， -0和0一样
 ```
+
 除了索引， 还支持切片：
+
 ```python
 word = "python"
 # word[0: 2] = 'py'
@@ -417,10 +424,12 @@ word = "python"
 # word[3:] = 'hon'， 等同于[3: len(word)]
 # word[::-1] = "nohtyp"，反转字符串
 ```
+
 切片和c++中的迭代器类似，都是为单闭合区间；
 切记str是const的， 不可以通过赋值等改变它们
 
-### 4、list：
+### 4、list
+
 通过[]或list()构建
 
 ```python
@@ -482,6 +491,7 @@ a.对list中方法的总结：
 b.几个方法详解：
 
 - append和extend：
+
 ```python
 lst = [1, 5, 4, 3, 8]
 lst.append(3) 
@@ -494,6 +504,7 @@ lst.extend([1, 2, 3])
 
 c.索引和切片：
 与str基本一致，但是由于list可变，还存在一个del语言：
+
 ```python
 lst = [3, 4, 5, 6, 7]
 del lst[0]
@@ -504,7 +515,8 @@ del lst[:]
 # lst = []
 ```
 
-### 5、uple:
+### 5、tuple
+
 通过()或tuple()构建(括号可以省略), 只包含一个元素时，在元素后面添加逗号
 
 ```python
@@ -516,11 +528,13 @@ def index(self, value, start=None, stop=None):
     pass
 # 返回子序列[start, stop)中第一个值为value的下标
 ```
+
 tuple和list的区别在于其不能改变，所有很多方法没有
 tuple也有索引和切片，不再赘述
 要想对tuple进行强制修改，可以通过list()构造
 
 ### 6、dict
+
 :通过{}或dict()构建
 
 ```python
@@ -631,7 +645,8 @@ dic = dic1.update(dic2)
 # dic2 = {'k1': 13, 'k2': 14, 'k3': 250, 'k4': 'Edward'}
 ```
 
-### 7、set:
+### 7、set
+
 通过set()构建
 
 ```python
@@ -717,6 +732,7 @@ a.对set中方法的总结:
 b.集合的运算符：
 
 a, b, c均为集合
+
 - 差集：c = a - b 等同于 c = a.difference(b)
 
     a -= b 等同于 a.difference_update(b)
@@ -736,4 +752,3 @@ a, b, c均为集合
 - 判断子集： a <= b 等同于 a.issubset(b)
 
 - 判断父集： a >= b 等同于 a.issupperset(b)
-

@@ -18,7 +18,7 @@ author: Edward
 
 ## 一、其他特殊语法
 
-### 1、for循环：
+### 1、for循环
 
 对于实现了iterator()、next()、hasNext()方法的，可以使用for in语法，有三种形态：
 
@@ -142,7 +142,7 @@ class Person(val name: String) {
 
 非抽象类没有声明primary constructor时，会有默认构造器
 
-### 2、创建实例：
+### 2、创建实例
 
 和Java不一样，在kotlin中创建实例不需要使用new
 
@@ -151,7 +151,7 @@ val invoice = Invoice()
 val customer = Customer("Joe Smith")
 ```
 
-### 3、继承：
+### 3、继承
 
 所有类默认继承Any(含有equals、hashCode和toString方法)
 
@@ -164,7 +164,7 @@ class Derived(p: Int) : Base(p)
 
 默认kotlin中所有类都是final的，要想实现继承，需要加open关键字
 
-### 4、重写方法：
+### 4、重写方法
 
 - 需要重写的方法，显式加open修饰
 - 被重写的方法，使用override修饰
@@ -179,7 +179,7 @@ open class AnotherDerived() : Base() {
 }
 ```
 
-### 5、重写属性：
+### 5、重写属性
 
 - 和重写方法使用一样
 - val属性可以被var属性覆盖
@@ -200,7 +200,7 @@ class Bar : Foo() {
 }
 ```
 
-### 6、多继承：
+### 6、多继承
 
 在多继承中，相同方法必须重写，可以使用super<Base>获得某个父类：
 
@@ -222,6 +222,6 @@ open class A {
 }
 ```
 
-### 7、抽象类：
+### 7、抽象类
 
 使用abstract关键字
