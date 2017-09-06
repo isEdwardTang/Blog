@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "学习资源汇总"
-categories: Kotlin
-tags:   primer Kotlin
+categories: Study
+tags:   study source
 author: Edward
 ---
 
