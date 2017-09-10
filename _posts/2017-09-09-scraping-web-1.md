@@ -6,6 +6,9 @@ tags: Python crawler
 author: Edward
 ---
 
+* content
+{:toc}
+
 这是我读《Web Scraping with Python》这本书中总结而来。从网络爬取我们所需要的东西是一件非常有意思的，让我们一步步开始吧！而掌握爬虫的基础是解析html文档，这里需要掌握BS这个库。
 
 
