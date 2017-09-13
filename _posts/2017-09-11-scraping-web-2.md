@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python网络爬之开始爬虫"
+title:  "Python网络爬虫之开始爬虫"
 categories: Python
 tags: Python crawler
 author: Edward
