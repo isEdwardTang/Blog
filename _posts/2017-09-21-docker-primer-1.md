@@ -9,7 +9,6 @@ author: Edward
 * content
 {:toc}
 
-
 Docke可以粗糙理解为轻量级的虚拟机，我们可以打包我们的应用和依赖到一个Container中，然后可以任意发布到Linux机器上。在自动打包和部署应用，自动化测试和持续集成
 ，以及部署和扩展webapp和数据库方面应用广泛。抓住时代的尾巴，一起学习一下！
 
@@ -21,17 +20,17 @@ Docke可以粗糙理解为轻量级的虚拟机，我们可以打包我们的应
 
 为什么要说安装，不得不说这坑人的windows了。家庭版的win10由于没有Hyper-V服务，必须借助于docker toolbox并开启虚拟化，docker toolbox需要安装Oracle的VirualBox，还要借助于bash，果断放弃了。而专业版开启Hype-v，可以直接安装。在linux上安装就比较简单了，特别是原生的ubuntu，我这里使用ubuntu安装，步骤很简单：
 
-- 更新源：'sudo apt-get install'
-- 安装docker：'sudo apt-get install docker.io'
+- 更新源：`sudo apt-get install`
+- 安装docker：`sudo apt-get install docker.io`
 
-使用'docker -v'查看版本，则安装成功。
+使用`docker -v`查看版本，则安装成功。
 
 但是docker必须在管理员权限下才能操作，比较麻烦，所以给用户添加入docker组：
 
-- 如果没有docker group就创建一个：'sudo groupadd docker'
-- 将当前用户添加到该group中：'sudo gpasswd -a ${USER} docker'
-- 重启docker服务：'sudo service docker restart'
-- 切换当前会话到新 group 或者重启 X 会话：'newgrp - docker' OR 'pkill X'
+- 如果没有docker group就创建一个：`sudo groupadd docker`
+- 将当前用户添加到该group中：`sudo gpasswd -a ${USER} docker`
+- 重启docker服务：`sudo service docker restart`
+- 切换当前会话到新 group 或者重启 X 会话：`newgrp - docker` OR `pkill X`
 
 注意，最后一步是必须的，否则因为 groups 命令获取到的是缓存的组信息，刚添加的组信息未能生效，所以 docker images 执行时同样有错。
 
@@ -47,31 +46,31 @@ Docker使用c/s架构。Docker Client和Docker daemon交流，Docker daemon做�
 
 ## 三、Docker命令
 
-- 'docker pull imageName' 从远端的Registry获得Image
+- `docker pull imageName` 从远端的Registry获得Image
 
-- 'docker build' 创建Image
+- `docker build` 创建Image
 
-- 'docker images' 列出所有的images
+- `docker images` 列出所有的images
 
-- 'docker run ContainerId' 运行container
+- `docker run ContainerId` 运行container
 
-- 'docker ps' 列出正在运行的container
+- `docker ps` 列出正在运行的container
 
-- 'docker ps -a' 查看所有container
+- `docker ps -a` 查看所有container
 
-- 'docker rm containerId' 删除已经结束的container
+- `docker rm containerId` 删除已经结束的container
 
-- 'docker rmi imageName' 删除image
+- `docker rmi imageName` 删除image
 
-- 'docker cp' 在host和container之间拷贝文件
+- `docker cp` 在host和container之间拷贝文件
 
-- 'docker commit' 提交对container的操作并创建新的image，如果不提交可能不会改变
+- `docker commit` 提交对container的操作并创建新的image，如果不提交可能不会改变
 
-- 'docker run imageName command' 运行一个container
+- `docker run imageName command` 运行一个container
 
-- 'doker stop containerId' 结束container 
+- `doker stop containerId` 结束container 
 
-- 'docker rmi imageName' 删除Image
+- `docker rmi imageName` 删除Image
 
 
 ## 四、Dockerfile
