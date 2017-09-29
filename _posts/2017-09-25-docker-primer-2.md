@@ -11,9 +11,7 @@ author: Edward
 
 简单讲一下docker中的service，官方解释：In a distributed application, different pieces of the app are called “services.”。
 
-
-
-
+--------------------
 
 ## docker-compose.yml
 

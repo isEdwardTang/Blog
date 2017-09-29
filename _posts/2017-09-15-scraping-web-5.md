@@ -11,8 +11,7 @@ author: Edward
 
 这次主要介绍spider的用法，详细见文档：[Scrapy英文文档](https://doc.scrapy.org/en/latest/intro/tutorial.html)
 
-
-
+--------------------
 
 ## Spider
 spider：定义如何去爬取一个网站
