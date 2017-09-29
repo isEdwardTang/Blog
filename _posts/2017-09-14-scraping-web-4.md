@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## 一、配置设置
 
 scrapy.cfg配置文件的位置：
@@ -73,5 +72,3 @@ scrapy.cfg配置文件的位置：
 `scrapy version [-v]`：打印Scrapy的版本
 
 `scrapy bench`：运行一个快速的benchmark测试
-
-

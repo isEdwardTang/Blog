@@ -14,7 +14,6 @@ Docker可以粗糙理解为轻量级的虚拟机，我们可以打包我们的�
 
 
 
-
 ## 一、Docker安装
 
 为什么要说安装，不得不说这坑人的windows了。家庭版的win10由于没有Hyper-V服务，必须借助于docker toolbox并开启虚拟化，docker toolbox需要安装Oracle的VirualBox，还要借助于bash，果断放弃了。而专业版开启Hype-v，可以直接安装。在linux上安装就比较简单了，特别是原生的ubuntu，我这里使用ubuntu安装，步骤很简单：
@@ -92,13 +91,3 @@ Dockerfile用来创建一个自定义的image，在当前目录下创建一个Do
 运行命令docker build -t newImage名 Dockerfile文件的路径，来创建一个新的image。
 
 Dockerfile中的每个命令产生一个分层
-
-
-
-
-
-
-
-
-
-

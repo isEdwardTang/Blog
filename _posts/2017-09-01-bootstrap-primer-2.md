@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## 一、文字排版
 
 ### 1、对齐
@@ -92,4 +91,3 @@ author: Edward
 - .center-block使块级元素内容居中
 - 父元素添加.clearfix清除浮动
 - .show和.hidden强制任意元素显示或隐藏，.invisible被用来仅仅影响元素的可见性
-

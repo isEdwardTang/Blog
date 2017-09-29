@@ -15,7 +15,6 @@ author: Edward
 
 
 
-
 ## 一、BeautifulSoup对象
 
 直接使用BeautifulSoup的构造器获得对象：

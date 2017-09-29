@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## 一、Deep Learning介绍
 
 ### 1、Machine Learning
@@ -58,13 +57,3 @@ network parameters = {w1, w2, ..., b1, b2, ...}
 - 重复，直到导数足够小
 
 - 注意，Gradient descent never guarantee global minima
-
-
-
-
-
-
-
-
-
-

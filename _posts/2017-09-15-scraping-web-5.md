@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## Spider
 spider：定义如何去爬取一个网站
 
@@ -48,6 +47,3 @@ logger：日志
 方法：
 
 from_crawler(crawler, *args, **kwargs)：
-
-
-

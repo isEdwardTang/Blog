@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## 一、语法糖
 
 kotlin中的语法糖是在太多了，用起来只能说，贼爽（虽然抄了C#和Python很多^-^)。

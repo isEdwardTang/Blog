@@ -14,7 +14,6 @@ author: Edward
 
 
 
-
 ## 一、Scrapy结构
 
 - 首先安装Scrapy的库，选择1.4的版本已经支持python3了，但是如果是在windows上安装会出现很多的问题，详细去谷歌相应的解决方案（windows就是个坑）。
