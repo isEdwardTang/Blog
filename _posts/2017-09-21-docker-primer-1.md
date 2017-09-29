@@ -89,5 +89,4 @@ Dockerfile用来创建一个自定义的image，在当前目录下创建一个Do
 - VOLUMN mount point
 
 运行命令docker build -t newImage名 Dockerfile文件的路径，来创建一个新的image。
-
 Dockerfile中的每个命令产生一个分层
