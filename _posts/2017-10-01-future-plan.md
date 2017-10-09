@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "阶段计划"
-categories: plan
+categories: Plan
 tags:   plan future 
 author: Edward
 ---
