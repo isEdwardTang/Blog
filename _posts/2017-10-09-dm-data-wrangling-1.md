@@ -125,7 +125,12 @@ dtype: int64
 当存在索引部分或全部重叠的数据集时，可以使用np.where来实现：
 
 ```python
-
+a = Series([np.nan, 2.5, np.nan, 3.5, 4.5, np.nan], index=['f', 'e', 'd', 'c', 'b', 'a'])
+b = Series(np.arange(len(a), dtype=np.float64), index=['f', 'e', 'd', 'c', 'b', 'a']); b[-1] = np.nan
+np.where(pd.isnull(a), b, a)
+"""
+array([ 0. ,  2.5,  2. ,  3.5,  4.5,  nan])
+"""
 ```
 
-series中的combine_first方法，实现的是相同的功能
+series中的combine_first方法，实现的是相同的功能，他能够用参数中的值替换缺失值：`a.combine_first(b)`
