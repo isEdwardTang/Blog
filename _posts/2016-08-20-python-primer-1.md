@@ -2,7 +2,7 @@
 layout: post
 title:  "Python入门一：基本数据类型"
 categories: Python
-tags:  primer Python
+tags:  primer python
 author: Edward
 ---
 

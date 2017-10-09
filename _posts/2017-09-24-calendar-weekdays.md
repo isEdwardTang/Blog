@@ -2,7 +2,7 @@
 layout: post
 title:  "Calendar之根据当前日期获取本周各个日期"
 categories: Java
-tags: Java 
+tags: java 
 author: Edward
 ---
 

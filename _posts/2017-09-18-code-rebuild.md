@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "代码重构"
-categories: coding
-tags: CodeRefactoring coding
+categories: Coding
+tags: codeRefactoring coding
 author: Edward
 ---
 

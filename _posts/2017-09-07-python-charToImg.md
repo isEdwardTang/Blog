@@ -2,7 +2,7 @@
 layout: post
 title: "用Python实现图片转字符画"
 categories: Python
-tags:   Python practice
+tags:   python practice
 author: Edward
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Java任务调度之Quartz"
 categories: Java
-tags:   Java scheduling
+tags:   java scheduling
 author: Edward
 ---
 

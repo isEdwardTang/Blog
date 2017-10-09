@@ -2,7 +2,7 @@
 layout: post
 title:  "自动化构建工具之Gradle"
 categories: BuildTool
-tags: BuildTool Gradle
+tags: buildTool gradle
 author: Edward
 ---
 

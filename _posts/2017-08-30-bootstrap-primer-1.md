@@ -2,7 +2,7 @@
 layout: post
 title: "Bootstrap总结一"
 categories: CSS
-tags:   primer Bootstrap CSS
+tags:   primer bootstrap css
 author: Edward
 ---
 

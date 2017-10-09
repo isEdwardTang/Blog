@@ -2,7 +2,7 @@
 layout: post
 title:  "Python入门二：函数"
 categories: Python
-tags:  primer Python
+tags:  primer python
 author: Edward
 ---
 

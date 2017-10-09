@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker入门二"
 categories: Docker
-tags: Docker primer
+tags: docker primer
 author: Edward
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Kotlin学习记录2"
 categories: Kotlin
-tags:   primer Kotlin
+tags:   primer kotlin
 author: Edward
 ---
 

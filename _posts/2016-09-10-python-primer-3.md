@@ -2,7 +2,7 @@
 layout: post
 title:  "Python入门三：文件操作"
 categories: Python
-tags:  primer Python
+tags:  primer python
 author: Edward
 ---
 

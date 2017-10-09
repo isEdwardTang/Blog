@@ -2,7 +2,7 @@
 layout: post
 title:  "Python网络爬虫之Scrapy框架基础教程二"
 categories: Python
-tags: Python crawler Scrapy
+tags: python crawler scrapy
 author: Edward
 ---
 

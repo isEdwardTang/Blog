@@ -2,7 +2,7 @@
 layout: post
 title: "初识深度学习"
 categories: DeepLearning
-tags:   DeepLearning primer
+tags:   deepLearning primer
 author: Edward
 ---
 

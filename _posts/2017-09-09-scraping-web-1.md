@@ -2,7 +2,7 @@
 layout: post
 title:  "Python网络爬之使用BeautifulSoup"
 categories: Python
-tags: Python crawler
+tags: python crawler
 author: Edward
 ---
 
