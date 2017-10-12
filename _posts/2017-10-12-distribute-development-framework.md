@@ -43,7 +43,7 @@ BASE理论是指Basically Available(基本可用)、Soft State(软状态)、Even
 
 dubb的架构如下图：
 
-![Dubbo 架构]
+![Dubbo 架构](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dubbo-architecture.png)
 
 其中分为注册中心Registry， 消费者Consumer，提供这Provider，监控中心Monitor。
 
