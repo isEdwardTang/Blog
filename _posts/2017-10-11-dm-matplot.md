@@ -33,7 +33,14 @@ author: Edward
 
 - 使用plot方法绘制图形：`plt.plot(randn(50).cumsum(), 'k--')`，会使用最后一次创建的subplot进行绘图，或者调用add_subplot返回的 AxesSubplot对象的实例方法绘制：`ax1.hist(randn(100), bins=20, color='k', alpha=0.3)`
 
-figure即最终绘制的图形
+figure即最终绘制的图形。
+
+figure的参数
+
+
+add_subplot的参数
+
+
 
 ### 2、使用subplots
 
@@ -54,9 +61,22 @@ subplots的参数介绍如下：
 
 使用figure的subplots_adjust方法修改间距：`subplots_adjust(left=None, bottom=None, right=None,top=None, wspace=None, hspace=None)`，其中wspace和hspace可以用来调整间距
 
+其他参数的作用
+
 ## 三、颜色、标记、线型
 
+matplotlib的plot函数接受一个x和y坐标，即一个表示颜色和线型的字符串缩写，如`ax.plot(x, y, 'g--')`；或者分别指定颜色和线型：`ax.plot(x, y, linestyle='--', color='g')`；还可以使用marker参数来指定标记，以及使用drawstyle来指定插入的方式：
+
+plot的具体参数
+
+linestyle
+
+color
+常用颜色可以用其的缩写词，要使用其他颜色可以指定rgb值
+
 ## 四、刻度、标签、图例
+
+
 
 ## 五、注解
 
