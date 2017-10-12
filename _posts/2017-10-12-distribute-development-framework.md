@@ -59,4 +59,7 @@ dubb的架构如下图：
 
 ## 三、分布式开发方式
 
-以前我们集中式开发调用的方式一般是通过Controller调用Service层，Service调用DAO层，而在分布式开发中，由于不同的服务是相互分隔开的，而相互之间的调用是通过dubbo的服务，基本的数据流向或者调用方式是这样：在每个服务上，通过Provider暴露服务，Provider主要负责业务的逻辑，Provider来调用Service，Service来调用Dao；对于其他的服务，在zookeeper上注册Provider后，其他的服务通过Consumer来调用其所需要的Provider；而对于特殊的服务，比如门户，需要通过它的Controller来调用Manager(Service)，然后Manager来调用其Consumer，用Consumer来去调用其他的服务。
+以前我们集中式开发调用的方式一般是通过Controller调用Service层，Service调用DAO层，而在分布式开发中，由于不同的服务是相互分隔开的，而相互之间的调用是通过dubbo的服务，基本的数据流向或者调用方式是这样：
+- 在每个节点上，通过Provider暴露服务，Provider主要负责业务的逻辑，Provider来调用Service，Service来调用Dao；
+- 对于其他的节点，在zookeeper上注册Provider后，其他的服务通过Consumer来调用其所需要的Provider；
+- 而对于特殊的节点，比如门户，需要通过它的Controller来调用Manager(Service)，然后Manager来调用其Consumer，用Consumer来去调用其他的服务。
