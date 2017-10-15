@@ -102,7 +102,7 @@ s = Series(np.random.randn(100))
 s.plot(kind='kde')
 ```
 
-![密度图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/svg.png)
+![密度图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/kde.png)
 
 通常情况下，直方图和密度图通常放在一起绘制：
 
