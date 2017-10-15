@@ -35,10 +35,21 @@ author: Edward
 
 figure即最终绘制的图形。
 
-figure的参数
+figure的参数：
+
+| 参数 | 说明 |
+| :--- | :--- |
+| num | 如果是int，则作为该figure的唯一标识，如果是string，则作为title使用，如果不存在，则会自动创建一个 |
+| figsize | 一个表示图形width、height(inches)的元组 |
+| dpi | 图形的分辨率 |
+| facecolor | 图形的背景色 |
+| edgecolor | 图形的边框色 |
+| frameon | 默认为True，如果是False，则不会绘制图形的框架 |
+| clear | 默认为False，如果是True，则图形已经存在会被clear掉 | 
+
+add_subplot的参数：
 
 
-add_subplot的参数
 
 
 
@@ -76,8 +87,43 @@ color
 
 ## 四、刻度、标签、图例
 
+- 通过set_xticks和set_xticklabels来调节x轴刻度及标签，需要分别传入
 
+- 通过set_xlabel为x轴设置名称
+
+- y轴同理
+
+- 通过set_title设置标题
+
+- 在添加调用ax.plot方法通过label添加图例，之后调用ax.legend()或plt.legend()来自动创建图例
+
+legend的参数要求：
 
 ## 五、注解
 
+注解可以通过text、arrow、annotate等函数进行添加：
+
+- text可以将文本绘制在图表的指定坐标(x, y)，并且可以加上自定义的格式，如：`ax.text(x, y, 'Hello World!', family='monospace', fontsize=10)
+
+- annotate
+
+- 绘制图形 add_patch方法：
+
+
+
 ## 六、保存图表
+
+通过plt.savefig方法可以将当前图表保存，或者使用实例方法fig.savefig
+
+参数如下：
+
+| 参数 | 说明 |
+| :--- | :--- |
+| fname | 文件名或文件对象，图像格式由文件拓展名推断 |
+| dpi | 图像的分辨率，默认为100 |
+| facecolor、edgecolor | 图像的背景色，默认为白色(w) |
+| format | 显示地设置文件格式('png', 'svg', 'pdf', 'ps', 'eps'等) |
+| bbox_inches | 图表需要保存的部分，如果设置为tight，则去去除图表周围的空白部分 |
+
+通过plt.rc()方法设置配色方案，参数如下：
+
