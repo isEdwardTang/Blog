@@ -24,7 +24,7 @@ s = Series(np.random.randn(10).cumsum(), index=np.arange(0, 100, 10))
 s.plot()
 ```
 
-![Series.plot方法绘图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/series_fig.svg)
+![Series.plot方法绘图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/series_fig.png)
 
 | 参数 | 说明 |
 | :--- | :--- |
@@ -44,7 +44,7 @@ s.plot()
 df = DataFrame(np.random.randn(10, 4).cumsum(0), columns=['A', 'B', 'C', 'D'], index=np.arange(0, 100, 10))
 df.plot()
 ```
-![DataFrame.plot方法绘图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_fig.svg)
+![DataFrame.plot方法绘图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_fig.png)
 
 | 参数 | 说明 |
 | :--- | :--- |
@@ -69,7 +69,7 @@ data.plot(kind='bar', ax=axes[0], color='k', alpha=0.7)
 data.plot(kind='barh', ax=axes[1], color='k', alpha=0.7)
 ```
 
-![series柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/series_bar.svg)
+![series柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/series_bar.png)
 
 而对于DataFrame，会将每一行的值分为一组：
 
@@ -78,11 +78,11 @@ df = DataFrame(np.random.rand(6, 4), index=['one', 'two', 'three', 'four', 'five
 df.plot(kind='bar')
 ```
 
-![DataFrame柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_bar.svg)
+![DataFrame柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_bar.png)
 
 设置stacked=True，则DataFrame生成堆积柱状图：
 
-![DataFrame堆积柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_barh_stack.svg)
+![DataFrame堆积柱状图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dataframe_barh_stack.png)
 
 ## 三、直方图和密度图
 
@@ -93,7 +93,7 @@ s = Series(np.random.randn(100))
 s.hist(bins=30)
 ```
 
-![直方图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/hist.svg)
+![直方图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/hist.png)
 
 而密度图是观测数据的连续概率分布的估计，也称KDE图，在调用plot时加上kind='kde'即可绘制：
 
@@ -102,7 +102,7 @@ s = Series(np.random.randn(100))
 s.plot(kind='kde')
 ```
 
-![密度图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/svg.svg)
+![密度图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/svg.png)
 
 通常情况下，直方图和密度图通常放在一起绘制：
 
@@ -114,7 +114,7 @@ values.hist(bins=100, alpha=0.3, color='k', normed=True)
 values.plot(kind='kde', style='k--')
 ```
 
-![直方图和密度图混合](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/hist_kde.svg)
+![直方图和密度图混合](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/hist_kde.png)
 
 ## 四、散点图
 
@@ -127,7 +127,7 @@ trans_data = np.log(data).diff().dropna()
 plt.scatter(trans_data['m1'], trans_data['unemp'])
 ```
 
-![散点图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/scatter.svg)
+![散点图](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/scatter.png)
 
 通过scatter_matrix()方法可以创建散点图矩阵：
 
@@ -135,7 +135,7 @@ plt.scatter(trans_data['m1'], trans_data['unemp'])
 pd.plotting.scatter_matrix(trans_data, diagonal='kde', color='k', alpha=0.3)
 ```
 
-![散点图矩阵](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/scatter_matrix.svg)
+![散点图矩阵](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/scatter_matrix.png)
 
 
 
