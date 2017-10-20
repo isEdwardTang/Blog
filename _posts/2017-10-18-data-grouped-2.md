@@ -17,7 +17,7 @@ author: Edward
 
 ### 1、transform
 
-和agg不用的是，transform函数会将其应用的函数应用到各个分组，如何各个分组产生的是一个标量值，则该值就会被广播出去，下面是一个例子解释他们之间的区别：
+和agg不用的是，transform函数会将其应用的函数应用到各个分组，如果各个分组产生的是一个标量值，则该值就会被广播出去，下面是一个例子解释他们之间的区别：
 
 ```python
 df = DataFrame({'key1':['a', 'b', 'b', 'b', 'a'], 'key2': ['one', 'two', 'one', 'two', 'one'], 'data1':np.random.randn(5), 'data2':np.random.randn(5)})
