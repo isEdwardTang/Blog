@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 爬取boss直聘岗位
+title: "爬取boss直聘岗位"
 categories: 
 tags:   datamining
 author: Edward
