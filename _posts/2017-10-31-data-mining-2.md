@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "数据挖掘导论整理一之距离度量公式"
+title: "数据挖掘导论整理二之距离度量公式"
 categories: 
 tags:   datamining
 author: Edward
@@ -9,7 +9,7 @@ author: Edward
 * content
 {:toc}
 
-部分公式的Python实现
+部分公式的Python实现。
 
 --------------------
 
