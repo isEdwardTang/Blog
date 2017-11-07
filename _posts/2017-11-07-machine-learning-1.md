@@ -26,22 +26,22 @@ author: Edward
 ### 2、划分属性
 
 - 信息熵Ent(D)：描述样本集合D的纯度，Ent越小，纯度越高
-![Ent(D)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Ent.jpg)
+![Ent(D)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Ent.JPG)
 
 - 信息增益Gain(D,a)：使用属性a来划分D的纯度的提升，Gain越大，则使用属性a划分纯度越高
     - 对于取值数目多的属性有偏好
-![Gain(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gain.jpg)
+![Gain(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gain.JPG)
 
 - 增益率Gain_ratio(D,a)：信息增益和属性a的个数的商
     - 对于取值数目较少的有偏好，一般选择信息增益高于平均水平的属性，再选择其中增益率最高的
-![Gain_ratio(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gain_ratio.jpg)
-![IV](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/IV.jpg)
+![Gain_ratio(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gain_ratio.JPG)
+![IV](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/IV.JPG)
 
 - 基尼值Gini(D)：反映从数据集D中随机选取两个样本，其类别不一致的概率，Gini越小，纯度越高
-![Gini(D)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gini.jpg)
+![Gini(D)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gini.JPG)
 
 - 基尼指数Gini_index(D,a)：以属性a划分后的数据集的基尼值加权之和，基尼指数越小，选择a属性划分越好
-![Gini_index(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gini_index.jpg)
+![Gini_index(D,a)](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gini_index.JPG)
 
 ## 二、剪枝
 
