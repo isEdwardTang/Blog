@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "数据挖掘导论整理一之数据"
-categories: 
+categories: DataMining
 tags:   datamining
 author: Edward
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "数据挖掘导论整理二之距离度量公式"
-categories: 
+categories: DataMining
 tags:   datamining
 author: Edward
 ---
