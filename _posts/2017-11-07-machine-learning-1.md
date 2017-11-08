@@ -103,5 +103,31 @@ author: Edward
 
 ## 六、sklearn包
 
+使用skearn.tree包下的DecisionTreeClassifier来创建决策树对象，其参数详细如下：
 
+| 参数 | 说明 |
+| :---: | :---: |
+| criterion | 计算划分特征质量的方法，默认为gini，还可以使用entropy |
+| spliter | 特征划分点的选择标准，默认为best，即选择所有点中最优的，random表示部分划分点中找到最优，适合数据量大时 |
+| max_depth | 树的最大深度，默认最大 |
+| min_samples_split | 内部结点划分所需要的最小样本数，默认为2，如果样本量大，可以设置大一些 |
+| min_weight_fraction_leaf | 叶子节点所有样本权重和的最小值，如果小于，则回合兄弟结点一起被剪枝，默认为0 |
+| max_features | 划分时考虑的最大特征数，默认全部，log2表示log2N个，sqrt或auto表示平方根N，整数表示绝对数，浮点数表示百分比 |
+| max_leaf_nodes | 最大叶子节点数，可以防止过拟合，默认不限制 |
+| min_impurity_decrease | 不纯度的减少的最小值 |
+| class_weight | 指定样本各类别的权重，可以使用balance自动计算 |
+| presort | 数据是否预排序，默认False |
 
+方法：
+
+| 方法名 | 说明 |
+| :---: | :---: |
+| apply(X) | 返回输入样本X的叶子结点的下标 |
+| decision_path(X) | 返回每个输入样本是否经过决策树中的每一个节点 |
+| fit(X, y, sample_weight=None) | 训练样本 |
+| predict(X) | 预测输入样本 |
+| get_params(deep=True) | 返回参数 |
+| predict_log_proba(X) | 预测输入样本的log概率 |
+| predict_proba(X) | 预测输入样本的概率 |
+| score(X, y, sample_weight=None) | 返回测试数据的平均准确率 |
+| set_params(**params) | 设置参数 |
