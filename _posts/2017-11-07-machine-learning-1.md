@@ -131,3 +131,16 @@ author: Edward
 | predict_proba(X) | 预测输入样本的概率 |
 | score(X, y, sample_weight=None) | 返回测试数据的平均准确率 |
 | set_params(**params) | 设置参数 |
+
+例子：
+
+```python
+df = pd.read_csv("dataset/watermelon2.csv")
+data = pd.get_dummies(df[df.columns[1:-1]]).values
+target = df[df.columns[-1]].values
+clf = tree.DecisionTreeClassifier()
+clf.fit(data, target)
+dot_data = tree.export_graphviz(clf, out_file=None)
+graph = pydotplus.graph_from_dot_data(dot_data)
+graph.write_pdf("watermelon2.pdf")
+```
