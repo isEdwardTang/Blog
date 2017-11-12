@@ -57,30 +57,30 @@ BP算法基于梯度下降策略，即每次对参数进行调整时都是以目
 
 如图所示：
 
-![BP算法变量符号](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-flag.png) ，输出层神经元阈值和隐层神经元阈值分别用$\theta$和$\gamma$表示
+![BP算法变量符号](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-flag.png) ，输出层神经元阈值和隐层神经元阈值分别用&theta;和&gamma;表示
 
 每次训练的目的就是不断地改变连接权和阈值，使最终的网络的均方误差最小：
 
-![神经网络的输出](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output.png)
+![神经网络的输出](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output.png)<br />
 ![均方误差](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-error.png)
 
 进行一系列的推导，我们知道了每次连接权和阈值的更新公式：
 
-![输出层连接权](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output-weight.png)
+![输出层连接权](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output-weight.png)<br />
 ![其他更新公式](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-other-update.png)
 
-其中，$\eta$表示学习率，其他所用公式如下，其中g表示输出层的梯度项，e表示隐层的梯度项
-![BP所用公式g](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-gradient-g.png)
-![BP所用公式b](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-b.png)
+其中，&eta;表示学习率，其他所用公式如下，其中g表示输出层的梯度项，e表示隐层的梯度项
+![BP所用公式g](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-gradient-g.png)<br />
+![BP所用公式b](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-b.png)<br />
 $$e^h$$ ![BP所用公式e](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-gradient-e.png)
 
 有时候为了精细化处理，输出层和隐层所用的学习率可以不必相等
 
 ### 3、BP算法的工作流程
 
-- 输入训练集D和学习率$\eta$
+- 输入训练集D和学习率&eta;
 - 在(0,1)范围内初始化网络中所有连接权和阈值
-- 对于所有的样本点，计算当前样本的输出$\hat{y}$，及g和e
+- 对于所有的样本点，计算当前样本的输出y，及g和e
 - 更新连接权和阈值
 - 重复操作
 
@@ -99,7 +99,7 @@ $$e^h$$ ![BP所用公式e](https://raw.githubusercontent.com/isEdwardTang/Blog/g
 ### 6、过拟合
 
 - 早停：将数据分成训练集和验证集，训练集用来计算梯度、更新连接权、阈值，验证集用来估计误差，若训练集误差降低但验证集误差升高，则停止训练，并返回具有最小验证集误差的连接权和阈值。
-- 正则化：在误差目标函数中增加一个用于描述网络复杂度的部分，如下，其中$\gamma$对经验误差和网络复杂度进行折中，常使用交叉验证法来估计：
+- 正则化：在误差目标函数中增加一个用于描述网络复杂度的部分，如下，其中&gamma;对经验误差和网络复杂度进行折中，常使用交叉验证法来估计：
 
 ![调整后的误差目标函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-E-adjust.png)
 
@@ -120,13 +120,13 @@ $$e^h$$ ![BP所用公式e](https://raw.githubusercontent.com/isEdwardTang/Blog/g
 
 ![RBF网络](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/RBF.png)
 
-q为隐层神经元的个数，c和w表示隐层神经元的中心和权重，$\rho$表示径向基函数，定义为样本x到数据中心ci之间欧式距离的单调函数，常用的为高斯径向基函数：
+q为隐层神经元的个数，c和w表示隐层神经元的中心和权重，&rho;表示径向基函数，定义为样本x到数据中心ci之间欧式距离的单调函数，常用的为高斯径向基函数：
 
 ![高斯径向基函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/RBF-function.png)
 
 训练步骤：
 - 确定神经元中心c，常使用随机采样、聚类等
-- 利用BP算法来确定$$w^i$$和$\beta$^i
+- 利用BP算法来确定w<sub>i</sub>和&beta;<sub>i</sub>
 
 ### 2、ART
 
@@ -170,7 +170,7 @@ Boltzmann机是一种基于能量的模型，其神经元分为显层和隐层�
 
 ![Boltzmann机能量](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Boltzmann-energy.png)
 
-其中，w表示连接权，s表示激活或者抑制状态（0或1），$\theta$表示阈值。
+其中，w表示连接权，s表示激活或者抑制状态（0或1），&theta;表示阈值。
 
 由于标准的Boltzmann机复杂度高，一般采用受限的Boltzmann机（RBM），只保留显层和隐层的连接，采用CD算法（对比散度Contrastive DIvergence）
 
