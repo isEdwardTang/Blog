@@ -178,6 +178,16 @@ Boltzmann机是一种基于能量的模型，其神经元分为显层和隐层�
 
 深度学习采用多隐层神经网络。常用的算法包括DBN和CNN。
 
+## 五、sckit-learn的神经网络库
+
+使用sklearn.neural_network.MLPClassifier来直接对多层感知机分类：
+
+MLPClassifier的参数解释如下：
+
+| 参数 | 说明 |
+| :---: | :---: |
+| hidden_layer_sizes | 
+
 
 
 
