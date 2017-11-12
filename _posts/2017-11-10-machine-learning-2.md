@@ -19,23 +19,23 @@ author: Edward
 
 神经元接收来自其他n个神经元的输入信号，通过带权重的连接进行传递，然后将接收到的总的输入值和神经元的阈值比较，通过激活函数处理产生该神经元的输出。
 
-[M-P模型](m-pmodel.png)
+![M-P模型](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/m-pmodel.png)
 
 ### 2、激活函数
 
 理想中使用阶跃函数作为激活函数，但是其不连续，一般使用Sigmod函数：
 
-[阶跃函数和Sigmod函数](activation_function.png)
+![阶跃函数和Sigmod函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/activation_function.png)
 
 ### 3、感知机
 
 感知机通常由两层神经元组成，输入层接收外界输入信号后传递给输出层，输出层是M-P神经元，输入层的神经元之间进行与或非等运算：
 
-[感知机](perceptron.png)
+![感知机](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/perceptron.png)
 
 感知机每次权重的调整如下：
 
-[调整感知机权重](perceptron_adjust.png)
+![调整感知机权重](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/perceptron_adjust.png)
 
 由于感知机只有一层功能神经元，只能进行线性可分的问题的训练，学习能力有限。
 
@@ -43,7 +43,7 @@ author: Edward
 
 和感知机相比，多层网络使用了多层神经元，每层神经元和下一层的神经元全互连，中间的神经元称为隐含层，隐含层和输出层都是具有激活函数的功能神经元，输入层仅仅是接收输入：
 
-[多层前馈网络](multi-layer-feedforward-netural.png)
+![多层前馈网络](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/multi-layer-feedforward-netural.png)
 
 ## 二、误差逆传播算法
 
@@ -57,30 +57,30 @@ BP算法基于梯度下降策略，即每次对参数进行调整时都是以目
 
 如图所示：
 
-[BP算法变量符号](BP-flag.png) ，输出层神经元阈值和隐层神经元阈值分别用\theta和\gamma表示
+![BP算法变量符号](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-flag.png) ，输出层神经元阈值和隐层神经元阈值分别用$\theta$和$\gamma$表示
 
 每次训练的目的就是不断地改变连接权和阈值，使最终的网络的均方误差最小：
 
-[神经网络的输出](BP-output.png)
-[均方误差](BP-error.png)
+![神经网络的输出](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output.png)
+![均方误差](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-error.png)
 
 进行一系列的推导，我们知道了每次连接权和阈值的更新公式：
 
-[输出层连接权](BP-output-weight.png)
-[其他更新公式](BP-other-update.png)
+![输出层连接权](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-output-weight.png)
+![其他更新公式](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-other-update.png)
 
-其中，\eta表示学习率，其他所用公式如下，其中g表示输出层的梯度项，e表示隐层的梯度项
-[BP所用公式g](BP-gradient-g.png)
-[BP所用公式b](BP-b.png)
-eh [BP所用公式e](BP-gradient-e.png)
+其中，$\eta$表示学习率，其他所用公式如下，其中g表示输出层的梯度项，e表示隐层的梯度项
+![BP所用公式g](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-gradient-g.png)
+![BP所用公式b](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-b.png)
+$$e^h$$ ![BP所用公式e](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-gradient-e.png)
 
 有时候为了精细化处理，输出层和隐层所用的学习率可以不必相等
 
 ### 3、BP算法的工作流程
 
-- 输入训练集D和学习率\eta
+- 输入训练集D和学习率$\eta$
 - 在(0,1)范围内初始化网络中所有连接权和阈值
-- 对于所有的样本点，计算当前样本的输出\hat{y}，及g和e
+- 对于所有的样本点，计算当前样本的输出$\hat{y}$，及g和e
 - 更新连接权和阈值
 - 重复操作
 
@@ -88,7 +88,7 @@ eh [BP所用公式e](BP-gradient-e.png)
 
 之前我们使用的是标准BP算法，是对于某一个输出神经元的均方误差最小，而BP实际是要最小化训练集上的累计误差：
 
-[累计误差](BP-error-cum.png)
+![累计误差](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-error-cum.png)
 
 - 一般先使用累计BP算法使累计误差下降到一定程度，再使用标准BP算法
 
@@ -99,9 +99,9 @@ eh [BP所用公式e](BP-gradient-e.png)
 ### 6、过拟合
 
 - 早停：将数据分成训练集和验证集，训练集用来计算梯度、更新连接权、阈值，验证集用来估计误差，若训练集误差降低但验证集误差升高，则停止训练，并返回具有最小验证集误差的连接权和阈值。
-- 正则化：在误差目标函数中增加一个用于描述网络复杂度的部分，如下，其中\gamma对经验误差和网络复杂度进行折中，常使用交叉验证法来估计：
+- 正则化：在误差目标函数中增加一个用于描述网络复杂度的部分，如下，其中$\gamma$对经验误差和网络复杂度进行折中，常使用交叉验证法来估计：
 
-[调整后的误差目标函数](BP-E-adjust.png)
+![调整后的误差目标函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/BP-E-adjust.png)
 
 ### 7、全局最小和局部最小
 
@@ -118,15 +118,15 @@ eh [BP所用公式e](BP-gradient-e.png)
 
 径向基函数网络（Radial Basic Function），单隐层前馈神经网络，使用径向基函数作为隐层激活函数，输出层为隐层神经元的线性组合：
 
-[RBF网络](RBF.png)
+![RBF网络](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/RBF.png)
 
-q为隐层神经元的个数，c和w表示隐层神经元的中心和权重，\rho表示径向基函数，定义为样本x到数据中心ci之间欧式距离的单调函数，常用的为高斯径向基函数：
+q为隐层神经元的个数，c和w表示隐层神经元的中心和权重，$\rho$表示径向基函数，定义为样本x到数据中心ci之间欧式距离的单调函数，常用的为高斯径向基函数：
 
-[高斯径向基函数](RBF-function.png)
+![高斯径向基函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/RBF-function.png)
 
 训练步骤：
 - 确定神经元中心c，常使用随机采样、聚类等
-- 利用BP算法来确定wi和\betai
+- 利用BP算法来确定$$w^i$$和$\beta$^i
 
 ### 2、ART
 
@@ -168,9 +168,9 @@ ELman网络是一种递归神经网络（网络中允许出现环形结构，让
 
 Boltzmann机是一种基于能量的模型，其神经元分为显层和隐层，显层表示数据的输入输出，隐层为数据的内在表达，Boltzmann机的能量定义为：
 
-[Boltzmann机能量](Boltzmann-energy.png)
+![Boltzmann机能量](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Boltzmann-energy.png)
 
-其中，w表示连接权，s表示激活或者抑制状态（0或1），\theta表示阈值。
+其中，w表示连接权，s表示激活或者抑制状态（0或1），$\theta$表示阈值。
 
 由于标准的Boltzmann机复杂度高，一般采用受限的Boltzmann机（RBM），只保留显层和隐层的连接，采用CD算法（对比散度Contrastive DIvergence）
 
