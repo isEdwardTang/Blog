@@ -186,7 +186,9 @@ MLPClassifier的参数解释如下：
 
 | 参数 | 说明 |
 | :---: | :---: |
-| hidden_layer_sizes | 
+| hidden_layer_sizes | 元组，表示每一个隐层的神经元个数 |
+| activation | 隐层激活函数，默认为relu，即f(x) = max(0, x)，还可以使用identity、logistic、tanh |
+| ... | ... |
 
 
 
