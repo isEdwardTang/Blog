@@ -141,4 +141,6 @@ KTT条件为：
 
 ![SVR-KTT条件](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/SVR-KTT.JPG)
 
+## 四、sklearn使用
 
+这里不做整理，参考网上博客：[sklearn支持向量机](http://blog.sina.com.cn/s/blog_62970c250102xg0g.html)
