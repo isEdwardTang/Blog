@@ -19,11 +19,11 @@ author: Edward
 
 如下图，分类问题的最基本思想就是基于数据集D，在样本空间中找到一个划分超平面，将不同类别的样本分开：
 
-![分类问题](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/svm-basic-problem.PNG)
+![分类问题](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/svm-basic-problem.JPG)
 
 即划分平面可用：w<sup>T</sup>+b=0表示，w为法向量，决定超平面的方向，b为位移量。距离超平面最近的训练样本点使样本分类正确，称为支持向量。两个异类支持向量的超平面距离之和称为间隔：
 
-![支持向量和间隔](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/supportvector-margin.PNG)
+![支持向量和间隔](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/supportvector-margin.JPG)
 
 需要最大化间隔，即最小化w<sup>-1</sup>，加上限制条件，得出支持向量机(SVM)的基本型：
 
