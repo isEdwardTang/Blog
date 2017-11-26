@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "机器学习四之集成学习"
+title: "机器学习五之集成学习"
 categories: MachineLearning
-tags:   datamining machineLearning svm
+tags:   datamining machineLearning ensemble
 author: Edward
 ---
 

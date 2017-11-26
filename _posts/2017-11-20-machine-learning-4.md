@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "机器学习三之贝叶斯分类器"
+title: "机器学习四之贝叶斯分类器"
 categories: MachineLearning
-tags:   datamining machineLearning svm
+tags:   datamining machineLearning bayesian
 author: Edward
 ---
 
