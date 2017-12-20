@@ -30,7 +30,7 @@ author: Edward
 Relief(Relievent Features)是一种过滤式特征选择方法，原理是：
 - 使用以下相关统计量来度量特征的重要性：
 
-![Relief相关统计量]()
+![Relief相关统计量](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Relief-correlation-statistic.JPG)
 
 其中，nh样本指的是和该样本同类的最近邻，nm是和该样本异类的最近邻，上标表示各个属性的不同取值
 
@@ -40,7 +40,7 @@ Relief(Relievent Features)是一种过滤式特征选择方法，原理是：
 
 而对于多分类问题，使用Relief-F来解决，相关统计量如下：
 
-![Relief-F相关统计量]()
+![Relief-F相关统计量](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Relief-F-correlation-statistic.JPG)
 
 其中，p<sub>l</sub>指的是第l类样本在数据集中所占的比例
 
@@ -58,8 +58,26 @@ LVW(Las Vegas Wrapper)是一种包裹式选择方法，过程如下：
 
 ### 3、嵌入式选择
 
-嵌入式选择
+嵌入式选择将特征选择过程与学习器训练过程放在一个优化过程中进行。即在最小化损失函数的基础上，再加上一个正则项，该正则项使用L1范式时称为LASSO（Least Absolute Shrinkage and Selection Operator），使用L2范式时称为岭回归。
+
+![LASSO](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/LASSO.JPG)<br />
+
+![岭回归](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/ridge-regression.JPG)
+
+L1范式和L2范式都可以降低过拟合，但是L1范式还可以更容易获得稀疏解，即特征向量存在零向量。
+
+![L2范式得到稀疏解](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/L2-sparse.JPG)
+
+对于L1正则化问题求解，使用近端梯度下降算法（Proximal Gradient Descent，PGD）。
 
 ## 三、字典学习
 
+字典学习指的是学习出一个字典，可以将普通稠密表达的样本转化为合适的稀疏表达形式，使学习任务简化。字典学习最简单的形式如下：
+
+![字典学习形式](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/dict-learning-model.JPG)
+
+解法和LASSO类似，采用变量交替优化的策略，常用的有基于逐列更新策略的KSVD。
+
 ## 四、压缩感知
+
+压缩感知指的是利用信号本身所具有的稀疏性，从部分观测样本中恢复原信号。包括感知测量和重构恢复，分别是利用傅立叶变换、小波变换、字典学习等将原始信号处理获得稀疏样本，及基于稀疏性从少量观测数据中恢复原信号。
