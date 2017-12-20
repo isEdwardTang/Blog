@@ -33,7 +33,9 @@ k近邻学习是一种懒惰学习(lazy learning)，训练开销为0；和其对
 
 - 计算降维后的样本内积矩阵B=Z<sup>T</sup>Z，其中b<sub>ij</sub>=z<sub>i</sub><sup>T</sup>z<sub>j</sub>，按照如下公式计算：
 
-![内积矩阵计算]()
+![内积矩阵计算1](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/internal-square-cal-1.JPG)<br />
+
+![内积矩阵计算2](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/internal-square-cal-2.JPG)
 
 - 对矩阵B进行特征值分解
 - 取&Lambda;<sup>&tilde;</sup>表示d<sup>'</sup>个最大特征值所构成的对角矩阵， V<sup>&tilde;</sup>为相应的特征向量矩阵
@@ -55,7 +57,7 @@ Z=W<sup>T</sup>X，其中X为原空间中的样本，W为变换矩阵，Z为新�
 过程如下：
 - 对所有样本进行中心化：
 
-![样本中心化]()
+![样本中心化](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/sample-centralization.JPG)
 
 - 计算样本的协方差矩阵XX<sup>T</sup>
 - 对协方差矩阵进行特征值分解
@@ -66,7 +68,7 @@ Z=W<sup>T</sup>X，其中X为原空间中的样本，W为变换矩阵，Z为新�
 - 通过不同低维空间中对k近邻分类器进行交叉验证来选取
 - 对于PCA，可以指定一个阈值t，选取使t最小的维数值：
 
-![重构阈值]()
+![重构阈值](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/rebuild-threshold.JPG)
 
 ### 2、核化线性降维
 
@@ -89,11 +91,11 @@ Z=W<sup>T</sup>X，其中X为原空间中的样本，W为变换矩阵，Z为新�
     - 对于每一个样本，确定其的k近邻
     - 分别计算线性重构的系数w<sub>i</sub>，对于在样本近邻内的按照如下公式计算，不是的话设为0：
 
-    ![线性重构系数]()
+    ![线性重构系数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/linear-rebuild-ratio.JPG)
 
     - 利用如下式计算M:
 
-    ![LLE算法特征矩阵]()
+    ![LLE算法特征矩阵](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/LLE-feature-matrix.JPG)
 
     - 对M进行特征值分解，则M的最小d<sup>'</sup>个特征值对应的特征向量
 
@@ -103,10 +105,10 @@ Z=W<sup>T</sup>X，其中X为原空间中的样本，W为变换矩阵，Z为新�
 
 定义马氏距离：
 
-![马氏距离]()
+![马氏距离](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Mahalanobis-distance.JPG)
 
 M是一个半正定对称矩阵，称为度量矩阵，我们提高近邻分类器的性能，可以通过对M的优化来完成。
 
 近邻成分分析(Neighbourhood, NCA)使用概率投票法，其优化目标为：
 
-![NCA优化目标]()
+![NCA优化目标](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/NCA-target.JPG)
