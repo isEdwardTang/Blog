@@ -109,11 +109,11 @@ LVQ(Learning Vector Quantization)假设数据样本带有类别标记，利用�
 
 ![高斯分布概率密度函数](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Gaussian-Probability-Density-Function.JPG)
 
-其完全由均值向量&mu;和协方差矩阵&Sigma;确定，记为p(x|&mu;,&Sigma;)，则定义高斯混合分布：
+其完全由均值向量&mu;和协方差矩阵&Sigma;确定，记为p(x\|&mu;,&Sigma;)，则定义高斯混合分布：
 
 ![高斯混合分布](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Mixture-of-Gaussian-Function.JPG)
 
-记&gamma;<sub>ji</sub>表示样本x<sub>i</sub>由第i个高斯混合成分生成的概率，
+记&gamma;<sub>ji</sub>表示样本x<sub>j</sub>由第i个高斯混合成分生成的概率，
 
 ![高斯混合成分后验概率](https://raw.githubusercontent.com/isEdwardTang/Blog/gh-pages/images/Mixture-of-Gaussian-after-probility.JPG)
 
