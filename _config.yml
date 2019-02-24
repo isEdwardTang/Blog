@@ -9,7 +9,8 @@
 title: Edward's Notebook
 brief-intro: Dream Chaser
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.isedwardtang.com" # the base hostname & protocol for your site
+# url: "https://www.isedwardtang.com" # the base hostname & protocol for your site
+# url: "http://isedwardtang.github.io"
 
 permalink: /:year/:month/:day/:title/
 
